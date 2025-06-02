@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<style>
+    .input-container{
+        display: flex;
+        flex-direction: column;
+        background-color: blue;
+        align-items: center;
+        font-size: 30px;
+        margin: 30;
+        padding: 20px;
+    }
+
+    .placeholder-container #inputBox{
+        width: 300px;
+        height: 100px;
+    }
+
+    #submitBtn{
+       width: 200px;
+        height: 100px;
+        border-radius: 8px; 
+        color: blueviolet;
+        background-color: #333;
+    }
+
+    #submitBtn:hover{
+        background-color: #6e1717;
+    }
+
+    .listContainer{
+        background-color: blueviolet;
+    }
+
+
+</style>
+<body>
+
+<section class="input-container" id="inputContainer">
+  <div class="placeholder-container">
+    <input id="inputBox" placeholder="Add Hi">
+    <button id="submitBtn">Submit</button>
+  </div>
+
+  <div class="listContainer">
+    <ul id="myHi">
+      <li>Hi</li>
+      <li>Hi</li>
+      <li>Hi</li>
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>
+
+    
+</body>
+</html>
