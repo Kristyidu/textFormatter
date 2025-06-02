@@ -11,7 +11,7 @@
     .input-container{
         display: flex;
         flex-direction: column;
-        background-color: blue;
+        background-color: #ccc;
         align-items: center;
         font-size: 30px;
         margin: 30;
@@ -21,6 +21,7 @@
     .placeholder-container #inputBox{
         width: 300px;
         height: 100px;
+        font-size: 16px;
     }
 
     #submitBtn{
@@ -35,8 +36,25 @@
         background-color: #6e1717;
     }
 
+    /*
     .listContainer{
         background-color: blueviolet;
+    }*/
+    
+     #myHi{
+        /* text-decoration: none; */
+    } 
+    
+    .li1{
+        font-weight: bold;
+    }
+
+    .li2{
+        text-transform:uppercase;
+    }
+
+    .li3{
+        background-color: red;
     }
 
 
@@ -46,21 +64,35 @@
 <section class="input-container" id="inputContainer">
   <div class="placeholder-container">
     <input id="inputBox" placeholder="Add Hi">
-    <button id="submitBtn">Submit</button>
+    <button id="submitBtn" onclick="">Submit</button>
   </div>
 
   <div class="listContainer">
     <ul id="myHi">
-      <li>Hi</li>
-      <li>Hi</li>
-      <li>Hi</li>
+      <li class="li1">Hi</li>
+      <li class="li2">Hi</li>
+      <li class="li3">Hi</li>
     </ul>
   </div>
 </section>
+
+    <script>
+        let myInput = document.getElementById (inputContainer);
+        let myBox = document.getElementById (inputBox);
+        let myButton = document.getElementById (submitBtn);
+
+
+         myButton = submitBtn.addEventListener(("click", e),{
+            e.preventDefault()
+        });
+
+        let ul = document.createElement(#myHi), {
+            myHi = innerHTML.value ()
+        }; 
+        
+    </script>
 
 </body>
 </html>
 
     
-</body>
-</html>
