@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>textFormatter</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text Formatter</title>
+  <style>
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      background-color: #ccc;
+      align-items: center;
+      font-size: 30px;
+      margin: 30px;
+      padding: 20px;
+    }
+
+    .placeholder-container #inputBox {
+      width: 300px;
+      height: 40px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    #submitBtn {
+      width: 200px;
+      height: 40px;
+      border-radius: 8px;
+      color: white;
+      background-color: #333;
+      cursor: pointer;
+    }
+
+    #submitBtn:hover {
+      background-color: #6e1717;
+    }
+
+    .listContainer ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .listContainer li {
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    .li1 {
+      font-weight: bold;
+    }
+
+    .li2 {
+      text-transform: uppercase;
+    }
+
+    .li3 {
+      background-color: red;
+      color: white;
+    }
+  </style>
 </head>
-
-<style>
-    .input-container{
-        display: flex;
-        flex-direction: column;
-        background-color: #ccc;
-        align-items: center;
-        font-size: 30px;
-        margin: 30;
-        padding: 20px;
-    }
-
-    .placeholder-container #inputBox{
-        width: 300px;
-        height: 100px;
-        font-size: 16px;
-    }
-
-    #submitBtn{
-       width: 200px;
-        height: 100px;
-        border-radius: 8px; 
-        color: blueviolet;
-        background-color: #333;
-    }
-
-    #submitBtn:hover{
-        background-color: #6e1717;
-    }
-
-    /*
-    .listContainer{
-        background-color: blueviolet;
-    }*/
-    
-     #myHi{
-        /* text-decoration: none; */
-    } 
-    
-    .li1{
-        font-weight: bold;
-    }
-
-    .li2{
-        text-transform:uppercase;
-    }
-
-    .li3{
-        background-color: red;
-    }
-
-
-</style>
 <body>
 
 <section class="input-container" id="inputContainer">
-    <h1>My Text Formatter</h1>
+  <h1>My Text Formatter</h1>
   <div class="placeholder-container">
-    <input id="inputBox" placeholder="Add Hi">
-    <button id="submitBtn" onclick="">Submit</button>
+    <input id="inputBox" placeholder="Add Hi" />
+    <button id="submitBtn">Submit</button>
   </div>
 
   <div class="listContainer">
     <ul id="myHi">
-      <li class="li1">Hi</li>
-      <li class="li2">Hi</li>
-      <li class="li3">Hi</li>
+      <!-- List items will be added here -->
     </ul>
   </div>
 </section>
 
-    <script>
-        let myInput = document.getElementById (inputContainer);
-        let myBox = document.getElementById (inputBox);
-        let myButton = document.getElementById (submitBtn);
+<script>
+  document.getElementById("submitBtn").addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default action
 
+    const input = document.getElementById("inputBox");
+    const inputValue = input.value.trim(); // Get and trim user input
 
-         myButton = submitBtn.addEventListener(("click", e),{
-            e.preventDefault()
-        });
+    if (inputValue === "") return; // Don't submit empty input
 
-        let ul = document.createElement(#myHi), {
-            myHi = innerHTML.value ()
-        }; 
-        
-    </script>
+    const ul = document.getElementById("myHi");
+
+    // Clear previous results
+    ul.innerHTML = "";
+
+    // Create and append list items
+    const li1 = document.createElement("li");
+    li1.className = "li1";
+    li1.textContent = inputValue;
+    ul.appendChild(li1);
+
+    const li2 = document.createElement("li");
+    li2.className = "li2";
+    li2.textContent = inputValue;
+    ul.appendChild(li2);
+
+    const li3 = document.createElement("li");
+    li3.className = "li3";
+    li3.textContent = inputValue;
+    ul.appendChild(li3);
+  });
+</script>
 
 </body>
 </html>
-
-    
